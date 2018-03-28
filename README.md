@@ -1,7 +1,16 @@
-# ObamaNet : Lip Sync from Audio
 
-<!-- ![Alt Text](results/raw_input.gif) -->
-![Alt Text](results/video_input.gif)![Alt Text](results/a2key.gif)![Alt Text](results/key2im.gif)
+
+
+<h1 align=center> ObamaNet : Lip Sync from Audio </h1>
+
+
+<p align="center">
+<img src="results/raw_input.gif" alt="NMPC" width="440" height="440" border="20" /></a> 
+<img src="results/key2im.gif" alt="NMPC" width="440" height="440" border="20" /></a>
+<img src="results/video_input.gif" alt="NMPC" width="290" height="290" border="20" /></a>
+<img src="results/a2key.gif" alt="NMPC" width="290" height="290" border="20" /></a>
+<img src="results/key2im.gif" alt="NMPC" width="290" height="290" border="20" /></a>
+</p>
 
 
 ### 0. Requirements
