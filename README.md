@@ -12,18 +12,37 @@
 <img src="results/key2im.gif" alt="NMPC" width="290" height="290" border="20" /></a>
 </p>
 
+### List of Contents
 
-### 0. Requirements
----
-* Python 3.5+
+* [Requirements](https://github.com/karanvivekbhargava/obamanet#requirements)
+* [Data Extraction](https://github.com/karanvivekbhargava/obamanet#data_extraction)
+* [Data Preprocessing](https://github.com/karanvivekbhargava/obamanet#data_preprocessing)
+* [Training Different Models](https://github.com/karanvivekbhargava/obamanet#training_different_models)
+* [Pretrained Model](https://github.com/karanvivekbhargava/obamanet#pretrained_model)
+* [How to run an example](https://github.com/karanvivekbhargava/obamanet#how_to_run_an_example)
+* [Citations](https://github.com/karanvivekbhargava/obamanet#citations)
+* [FAQs](https://github.com/karanvivekbhargava/obamanet#faqs)
+	
+
+### Requirements
+
+You may install the requirements by running the following command
+```
+sudo pip3 install -r requirements.txt
+```
+
+The project is built for python 3.5 and above. The other libraries are listed below
 * OpenCV (`sudo pip3 install opencv-contrib-python`)
 * Dlib (`sudo pip3 install dlib`) with [this](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2) file unzipped in the data folder
+* Python Speech Features (`sudo pip3 install python-speech-features`)
+
+For a complete list refer to `requirements.txt` file.
+
+I used the tools below to extract and manipulate the data:
 * ffmpeg (`sudo apt-get install ffmpeg`)
 * [YouTube-dl](https://github.com/rg3/youtube-dl#video-selection)
-* [Pix2pix](https://github.com/affinelayer/pix2pix-tensorflow)
 
-
-### 1. Data Extraction
+### Data Extraction
 ---
 I extracted the data from youtube using youtube-dl. It's perhaps the best downloader for youtube on linux. Commands for extracting particular streams are given below.
 
@@ -73,14 +92,30 @@ To convert images to video
 ffmpeg -r 30 -f image2 -s 256x256 -i %d-targets.png -vcodec libx264 -crf 25 ../targets.mp4
 ```
 
-Sample: [Target](https://drive.google.com/open?id=1A7wF_WvxLKVsFpKOVwUBIhl75HDhYNhP) | [Output](https://drive.google.com/open?id=1Rok6o_ONYmRTAmFqHz9duoGZcipjTiBU)
-
 
 ### Pretrained Model
 
-Link to the pretrained model and a subset of the data is given below for people to play with.
+Link to the pretrained model and a subset of the data is here - [Link](https://drive.google.com/drive/folders/1QDRCWmqr87E3LWmYztqE7cpBZ3fALo-x?usp=sharing)
 
-[Link](https://drive.google.com/drive/folders/1QDRCWmqr87E3LWmYztqE7cpBZ3fALo-x?usp=sharing)
+Download and extract the checkpoints and the data folders into the repository. The file structure should look as shown below.
+
+```
+obamanet
+|
+└─ data
+|   | audios
+|   | a2key_data
+|   ...
+|
+└─ checkpoints
+|   | output
+|   | model.h5
+|   ...
+└─ train.py
+└─ run.py
+└─ run.sh
+...
+```
 
 
 ### Running sample wav file
